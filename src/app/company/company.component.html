@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-content>
+    <h2>Solución #2</h2>
+
+    <form [formGroup]="allForm" (submit)="onSubmit()">
+      <mat-grid-list cols="2">
+        <mat-grid-tile>
+          <mat-form-field class="example-full-width">
+            <input type="text" matInput id="value" name="value" formControlName="value" />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <button mat-button color="accent" type="submit">Agregar</button><br />
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+
+
+    <mat-list>
+      <mat-list-item *ngFor="let e of ( companyObs$ | async)">
+        {{e.value}}
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

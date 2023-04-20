@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-content>
+    <h2>Solución #1</h2>
+    <mat-list>
+      <mat-list-item *ngFor="let item of typesOfShoes; let i = index">
+        {{item}}
+        <button mat-icon-button (click)="removeItem(i)" aria-label="eliminar">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+    <div>
+      <div matBadge={{counter}} matBadgeOverlap="false" class="demo-section"></div>
+    </div>
+  </mat-card-content>
+</mat-card>
