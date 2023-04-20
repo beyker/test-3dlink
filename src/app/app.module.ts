@@ -15,13 +15,15 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatInputModule} from '@angular/material/input';
 import { CompanyComponent } from './company/company.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { CountTextComponent } from './count-text/count-text.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MyListComponent,
-    CompanyComponent
+    CompanyComponent,
+    CountTextComponent
   ],
   imports: [
     BrowserModule,
