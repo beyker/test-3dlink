@@ -10,12 +10,17 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {MatCardModule} from '@angular/material/card';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatInputModule} from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatInputModule } from '@angular/material/input';
 import { CompanyComponent } from './company/company.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { CountTextComponent } from './count-text/count-text.component';
+import { MatTableModule } from '@angular/material/table';
+import { UserTableComponent } from './user-table/user-table.component';
+import { SearchFilterPipe } from './search-filter.pipe';
+import { CommonModule } from '@angular/common'
+
 
 
 @NgModule({
@@ -23,9 +28,12 @@ import { CountTextComponent } from './count-text/count-text.component';
     AppComponent,
     MyListComponent,
     CompanyComponent,
-    CountTextComponent
+    CountTextComponent,
+    UserTableComponent,
+    SearchFilterPipe
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -40,6 +48,7 @@ import { CountTextComponent } from './count-text/count-text.component';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
